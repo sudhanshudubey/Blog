@@ -750,12 +750,11 @@ const BlogPost = ({ postId, onNavigate }) => {
         </h2>
       </FadeIn>
 
-      <FadeIn delay={200}>
-        <div 
-          className="prose prose-stone prose-lg max-w-none prose-headings:font-serif prose-headings:font-normal hover:prose-a:text-green-800 prose-a:transition-colors"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-      </FadeIn>
+      {/* FIXED: REMOVED FadeIn WRAPPER FROM CONTENT */}
+      <div 
+        className="prose prose-stone prose-lg max-w-none prose-headings:font-serif prose-headings:font-normal hover:prose-a:text-green-800 prose-a:transition-colors"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
 
       <div className="mt-24 pt-12 border-t border-stone-200 flex justify-between items-center mb-20">
         <div className="text-stone-900 font-serif italic text-lg">Share this insight</div>
